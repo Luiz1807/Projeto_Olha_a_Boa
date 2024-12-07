@@ -7,7 +7,7 @@ const int TAMANHO_CARTELA = 5; // Define o tamanho fixo da cartela como 5x5
                                // (uma cartela de bingo padrão tem 5 linhas e 
                               //5 colunas)
                               
-struct NúmerosChamados {
+struct NumerosChamados {
     int numeros[75];  // Vetor que armazenará até 75 números chamados
     int quantidade;  // Um contador que indica quantos números já foram chamados até o momento
 }; 
@@ -198,7 +198,7 @@ void verificar_mensagens_especiais(Cartela& cartela, int id_cartela) {
 
 
 // Função para exibir os números que ja foram chamados recebendo a struct que salva a quantidade de numeros ja sorteados e o vetor que armazena os numeros chamados 
-void exibir_numeros_chamados(const NúmerosChamados& chamados) {
+void exibir_numeros_chamados(const NumerosChamados& chamados) {
     cout << "Números chamados: ";
 
     // loop que percorre o vetor para mostrar os numeros ja chamados que estão dentro do vetor
@@ -213,7 +213,7 @@ void exibir_numeros_chamados(const NúmerosChamados& chamados) {
 // Função principal que exibe o menu de seleção para o usuário 
 void menu() {
     Cartela cartelas[10]; //variavel que será responsável em passar as matrizes 
-    NúmerosChamados numeros_chamados = { {}, 0 }; //Variavel que será responsável em inicializar todas as posições de numeros[] com o valor de 0 e quantidade também 0 
+    NumerosChamados numeros_chamados = { {}, 0 }; //Variavel que será responsável em inicializar todas as posições de numeros[] com o valor de 0 e quantidade também 0 
     int quantidade_cartelas = 0; // variavel que conta quantas cartelas ja foram criadas 
 
     int opcao;
